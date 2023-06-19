@@ -18,5 +18,6 @@ module Backend
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    config.hosts << "8908-2804-d45-9959-e700-a1c3-3fa6-f271-9e8f.ngrok-free.app"
   end
 end
