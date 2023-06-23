@@ -19,5 +19,7 @@ module Backend
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
     config.hosts << "8908-2804-d45-9959-e700-a1c3-3fa6-f271-9e8f.ngrok-free.app"
+    config.hosts << "whizapp-edc9b777acd7.herokuapp.com"
+    config.hosts << "api.whizapp.app"
   end
 end
