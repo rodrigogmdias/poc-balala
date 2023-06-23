@@ -1,13 +1,17 @@
 module ApplicationHelper
   def get_openai_response(message)
     client = OpenAI::Client.new
+    
+    messages = []
+    Message.all.map { |message| messages <<  { role: message.role, content: message.content } }
+    messages << { role: "user", content: message }
+
+    puts "messages: #{messages}"
+
     response = client.chat(
       parameters: {
         model: "gpt-3.5-turbo", 
-        messages: [
-            { role: "system", content: "Seu nome é Rodrigo Dias, você é uma intenligencia criada para se passar por uma pessoal engraçada e que sempre faz piadas." },
-            { role: "user", content: message }
-        ], 
+        messages: messages, 
         temperature: 0.7,
       },
     )
