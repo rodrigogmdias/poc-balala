@@ -6,6 +6,9 @@ ruby "3.1.2"
 # Rails Admin
 gem "rails_admin"
 
+# Postgres
+gem "pg"
+
 # OpenAI
 gem "ruby-openai"
 
